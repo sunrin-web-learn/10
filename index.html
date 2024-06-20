@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="guessId" />
+    <button onclick="guess()">맞추기</button>
+
+    <script>
+        const random = Math.floor(Math.random() * 10);
+
+        function guess() {
+            const input = document.getElementById("guessId").value;
+            if(input > random) {
+                alert('더 낮아요 ㅠㅠㅠ')
+            } else if(input < random) {
+                alert('더 높아요 ㅠㅠㅠ')
+            } else {
+                alert('옹 ㄴㅇㅅ')
+            }
+        }
+    </script>
+</body>
+</html>
